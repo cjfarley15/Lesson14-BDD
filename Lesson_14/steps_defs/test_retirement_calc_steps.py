@@ -1,8 +1,7 @@
 
 
 from pytest_bdd import scenarios, given, when, then, parsers
-from Full_retirement_calcs import RetirementCalculator
-
+from Full_retirement_calc import RetirementCalculator
 
 CONVERTERS = {
     'Year': int,
@@ -14,20 +13,14 @@ CONVERTERS = {
 @scenarios('../features/retirement.feature', example_converters=CONVERTERS)
 
 @given("User enters “<Year>”")
-def year():
-    assert
+def year(Year):
+
 
 @when('User enters "<Month>"')
-def month():
-
+def step_impl():
+    raise NotImplementedError(u'STEP: When User enters "<Month>"')
 
 
 @then("result should be “<Age>”")
-def age(Age):
-    assert RetirementCalculator(current_m = )
-
-
-
-
-
-
+def step_impl():
+    raise NotImplementedError(u'STEP: Then result should be “<Age>”')
