@@ -4,16 +4,14 @@ Feature:  Retirement Age Calculator
 
   Scenario:  Test the Calculator for a Month Value Error
     Given The user enters "1961"
-    And The user enters "0"
-    When The User wants the result
+    When The user enters "0"
     Then The result should be Value Error
 
 
 
   Scenario: # Test the Calculator for incorrect format
     Given The user enters "1980"
-    And The user enters "Hello"
-    When The user wants the result
+    When The user enters "Hello"
     Then The result should be Error
 
 
@@ -32,8 +30,7 @@ Feature:  Retirement Age Calculator
 
   Scenario Outline: # Testing the Calculator for Retirement Age 66
     Given User enters “<Year>”
-    And User enters “<Month>”
-    When User wants the result
+    When User enters “<Month>”
     Then result should be “<Age>”
 
     Examples: Inputs
@@ -45,10 +42,9 @@ Feature:  Retirement Age Calculator
 
 
   Scenario Outline: Testing the Calculator for Retirement Age 65
-    Given User enters “Year”
-    And User enters “Month”
-    When User wants the result
-    Then result should be “Age”
+    Given User enters “<Year>”
+    And User enters “<Month>”
+    Then result should be “<Age>”
 
     Examples:
     | Year | Month | Age |
