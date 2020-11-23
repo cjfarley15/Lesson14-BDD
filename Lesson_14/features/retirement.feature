@@ -1,4 +1,4 @@
-# Created by Connor at 11/22/2020
+
 Feature:  Retirement Age Calculator
    Calculates a users Retirement Age
 
@@ -9,13 +9,12 @@ Feature:  Retirement Age Calculator
 
 
 
-  Scenario: # Test the Calculator for incorrect format
-    Given The user enters "1980"
-    When The user enters "Hello"
+  Scenario:  Test the Calculator for incorrect format
+    Given The user enters "Hello"
     Then The result should be Error
 
 
-  Scenario Outline: # Testing the Calculator for Retirement Age 67
+  Scenario Outline:  Testing the Calculator for Retirement Age 67
     Given User enters “<Year>”
     When User enters "<Month>"
     Then result should be “<Age>”
@@ -28,7 +27,7 @@ Feature:  Retirement Age Calculator
     | 2020 | 10    | 67 |
 
 
-  Scenario Outline: # Testing the Calculator for Retirement Age 66
+  Scenario Outline:  Testing the Calculator for Retirement Age 66
     Given User enters “<Year>”
     When User enters “<Month>”
     Then result should be “<Age>”
